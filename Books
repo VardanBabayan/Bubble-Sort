@@ -1,0 +1,21 @@
+dictionary = {'Creativity, Inc. by Edwin Catmull': 2014,
+            'The Great Gatsby by F. Scott Fitzgerald': 1925,
+            '1984 by George Orwell': 1949}
+
+list = list(dictionary.values())
+
+def BubbleSort(array):
+   n = len(list)
+   for i in range(n - 1):
+       for j in range(0, n - i - 1):
+           if array[j] > array[j + 1]:
+               array[j], array[j + 1] = array[j + 1], array[j]
+
+
+array = list
+
+BubbleSort(array)
+
+print("Sorted array of dates is:")
+for i in range(len(array)):
+   print("%d" % array[i])
